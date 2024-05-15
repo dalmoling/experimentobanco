@@ -1,0 +1,9 @@
+Documentação da Implementação
+Este exemplo simples demonstra como configurar um aplicativo Flask para se conectar 
+a diferentes esquemas em um banco de dados PostgreSQL com base no tenant que está fazendo a requisição.
+A rota recebe um ID de tenant e ajusta o search_path do PostgreSQL para usar o esquema correspondente a esse tenant.
+
+Considerações 
+Essa abordagem é bastante eficaz para cenários onde o número de tenants é gerenciável e 
+o isolamento de dados é uma preocupação, mas onde a infraestrutura e custos precisam ser otimizados. 
+É crucial considerar questões de segurança como injeção de SQL ao definir o esquema dinamicamente.
